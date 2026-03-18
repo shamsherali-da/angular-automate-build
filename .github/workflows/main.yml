@@ -7,6 +7,9 @@ on:
 jobs:
   build-app:
     runs-on: ubuntu-latest
+    concurrency:
+      group: deploy
+      cancel-in-progress: true
     steps:
       - name: checking-updates
         uses: actions/checkout@v4

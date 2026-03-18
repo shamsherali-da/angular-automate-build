@@ -17,7 +17,7 @@ jobs:
           cache: 'npm'
       - name: install dependencies
         # run: npm install
-        run: npm ci
+        run: npm install --legacy-peer-deps
       - name: make-build
         run: npm run build
 
@@ -26,6 +26,8 @@ jobs:
         with: 
           name: build-my-angular-web-app
           path: dist/build-my-angular-web-app/
+      - name: deploy-build
+        run: npm run deploy
           
             
         

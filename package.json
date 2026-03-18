@@ -1,4 +1,5 @@
 {
+  "homepage": "git@github.com:shamsherali-da/angular-automate-build.git",
   "name": "angular-web-app",
   "version": "0.0.0",
   "scripts": {
@@ -7,6 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "deploy":"gh-pages -d dist",
     "serve:ssr:angular-web-app": "node dist/angular-web-app/server/server.mjs"
   },
   "private": true,

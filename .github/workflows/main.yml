@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: checking-updates
         uses: actions/checkout@v4
-      - name: step-up nodejs
+      - name: step-up nodejs 
         uses: actions/setup-node@v4
         with: 
           node-version: 'lts/*'

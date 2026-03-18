@@ -1,0 +1,33 @@
+name: build-my-angular-web-app
+
+on: 
+  push:
+      branches: [main]
+
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking-updates
+        uses: actions/checkout@v4
+      - name: step-up nodejs
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 22.x
+          cache: 'npm'
+      - name: install dependencies
+        # run: npm install
+        run: npm ci
+      - name: make-build
+        run: npm run build
+
+      - name: upload bulid on artifacts
+        uses: actions/upload-artifact@v4
+        with: 
+          name: build-my-angular-web-app
+          path: dist/build-my-angular-web-app/
+          
+            
+        
+        
+            

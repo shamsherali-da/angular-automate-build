@@ -18,6 +18,8 @@ jobs:
       - name: install dependencies
         # run: npm install
         run: npm install 
+      - name: install-gh-pages
+        run: npm i gh-pages
       - name: make-build
         run: npm run build
 
